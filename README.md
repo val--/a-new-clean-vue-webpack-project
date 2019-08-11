@@ -1,1 +1,1 @@
-Just testing VueJS and Webpack.
+Just testing VueJS, Webpack and Leaflet.

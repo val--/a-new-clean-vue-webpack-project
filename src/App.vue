@@ -1,14 +1,18 @@
 <template>
-  <div class="full-width center-content">
-    <hello-component name="World" />
-  </div>
+	<div class="full-width center-content">
+		<users-map></users-map>
+	</div>
 </template>
+
 <script>
 import HelloComponent from './components/HelloComponent.vue'
+import UsersMap from './components/UsersMap.vue'
+
 export default {
-  components: {
-    HelloComponent
-  }
+	components: {
+		HelloComponent,
+		UsersMap
+	}
 }
 </script>
 

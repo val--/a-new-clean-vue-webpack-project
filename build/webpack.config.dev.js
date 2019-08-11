@@ -17,22 +17,29 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        use: 'vue-loader'
-      },
-      {
-        test: /\.css$/,
-          use: [
-            'vue-style-loader',
-            'css-loader'
-          ]
+        {
+            test: /\.vue$/,
+            use: 'vue-loader'
         },
         {
-          test: /\.js$/,
-          use: 'babel-loader'
-          
-        }
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                },
+            ],
+        },
+        {
+        test: /\.css$/,
+            use: [
+                'vue-style-loader',
+                'css-loader'
+            ]
+        },
+        {
+            test: /\.js$/,
+            use: 'babel-loader' 
+        },
     ]
   },
   plugins: [
@@ -44,7 +51,7 @@ module.exports = {
       inject:true
     }),
     new CopyWebpackPlugin([{
-      from: resolve('static/img'),
+      from: resolve('assets/img'),
       to: resolve('dist/static/img'),
       toType: 'dir'
     }]),
